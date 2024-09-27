@@ -43,7 +43,7 @@
   </head>
   <body class="font-lexend">
     <!-- header section  -->
-    <header class="bg-[#F9F7F3]">
+    <header class="sticky top-0 bg-[#F9F7F3]">
       <!-- navbar section  -->
       <nav class="container mx-auto md:pb-10">
         <div
@@ -63,14 +63,19 @@
               Donate Bangladesh
             </p>
           </div>
-          <div class="flex-col md:flex">
+          <div class="flex-col md:flex-row">
             <img src="assets/coin.png" alt="" />
-            <p class="font-medium text-xl text-[#11111170] ml-3">5500 BDT</p>
+            <p
+              id="current-balance"
+              class="font-medium text-xl text-[#11111170] ml-3"
+            >
+              5500 BDT
+            </p>
           </div>
         </div>
       </nav>
       <!-- donation and history button -->
-      <div class="flex justify-center gap-4 bg-white pt-10 md:pt-20">
+      <div class="flex justify-center gap-4 bg-white pt-10 md:pt-20 pb-8">
         <button
           class="bg-btnColor btn md:btn-md rounded-lg font-semibold text-xl px-8"
         >
@@ -85,7 +90,7 @@
     <main class="bg-white pb-10 md:pb-20 container mx-auto">
       <!--Noakhali flood card -->
       <div
-        class="md:w-5/6 mx-auto md:flex items-center border-2 border-[#11111110] rounded-2xl p-8 mt-8"
+        class="md:w-5/6 mx-auto md:flex items-center border-2 border-[#11111110] rounded-2xl p-8"
       >
         <figure class="md:w-1/2">
           <img src="assets/noakhali.png" alt="Shoes" class="rounded-xl" />
@@ -95,7 +100,12 @@
             class="flex justify-center items-center mb-4 mt-4 md:mt-0 px-3 py-2 w-max bg-[#1111110D] rounded-lg"
           >
             <img src="assets/coin.png" alt="" />
-            <p class="font-medium text-base text-[#111111B3] ml-3">0 BDT</p>
+            <p
+              id="noakhali-balance"
+              class="font-medium text-base text-[#111111B3] ml-3"
+            >
+              0 BDT
+            </p>
           </div>
           <h2 class="text-xl font-bold text-textColor mb-4">
             Donate for Flood at Noakhali, Bangladesh
@@ -109,12 +119,14 @@
             need.
           </p>
           <input
+            id="noakhali-amount"
             type="text"
             placeholder="Write Donation Amount"
             class="input input-bordered w-full mb-4"
           />
           <div class="">
             <button
+              id="noakhali-donet"
               class="bg-btnColor w-full btn md:btn-md rounded-lg font-semibold text-xl text-textColor"
             >
               Donate Now
@@ -134,7 +146,12 @@
             class="flex justify-center items-center mb-4 mt-4 md:mt-0 px-3 py-2 w-max bg-[#1111110D] rounded-lg"
           >
             <img src="assets/coin.png" alt="" />
-            <p class="font-medium text-base text-[#111111B3] ml-3">0 BDT</p>
+            <p
+              id="feni-balance"
+              class="font-medium text-base text-[#111111B3] ml-3"
+            >
+              0 BDT
+            </p>
           </div>
           <h2 class="text-xl font-bold text-textColor mb-4">
             Donate for Flood at Feni, Bangladesh
@@ -150,12 +167,14 @@
             need.
           </p>
           <input
+            id="feni-amount"
             type="text"
             placeholder="Write Donation Amount"
             class="input input-bordered w-full mb-4"
           />
           <div class="">
             <button
+              id="feni-donet"
               class="bg-btnColor w-full btn md:btn-md rounded-lg font-semibold text-xl text-textColor"
             >
               Donate Now
@@ -175,7 +194,12 @@
             class="flex justify-center items-center mb-4 mt-4 md:mt-0 px-3 py-2 w-max bg-[#1111110D] rounded-lg"
           >
             <img src="assets/coin.png" alt="" />
-            <p class="font-medium text-base text-[#111111B3] ml-3">0 BDT</p>
+            <p
+              id="quota-balance"
+              class="font-medium text-base text-[#111111B3] ml-3"
+            >
+              0 BDT
+            </p>
           </div>
           <h2 class="text-xl font-bold text-textColor mb-4">
             Aid for Injured in the Quota Movement
@@ -192,12 +216,14 @@
             their time of need.
           </p>
           <input
+            id="quota-amount"
             type="text"
             placeholder="Write Donation Amount"
             class="input input-bordered w-full mb-4"
           />
           <div class="">
             <button
+              id="quota-donet"
               class="bg-btnColor w-full btn md:btn-md rounded-lg font-semibold text-xl text-textColor"
             >
               Donate Now
@@ -211,5 +237,6 @@
     <!-- script files  -->
     <script src="JS Files/common-function.js"></script>
     <script src="JS Files/blog-home.js"></script>
+    <script src="JS Files/donet.js"></script>
   </body>
 </html>
