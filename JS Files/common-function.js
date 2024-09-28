@@ -21,7 +21,11 @@ function donetFunction(id1, id2, id3) {
     const currentBalance = parseFloat(getInnerText("current-balance"));
     const donetAmount = parseFloat(getValue(id2));
     const noakhaliBalance = parseFloat(getInnerText(id3));
-    if (donetAmount > 0 && currentBalance > 0) {
+    if (
+      donetAmount > 0 &&
+      donetAmount <= currentBalance &&
+      currentBalance > 0
+    ) {
       const newBalance = currentBalance - donetAmount;
       document.getElementById("current-balance").innerText =
         newBalance + " BDT";
@@ -65,6 +69,7 @@ function donetFunction(id1, id2, id3) {
     } else {
       alert("You can not donet");
     }
+    getEleID(id2).value = "";
   });
 }
 
