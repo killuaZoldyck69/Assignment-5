@@ -27,8 +27,48 @@ function donetFunction(id1, id2, id3) {
         newBalance + " BDT";
       const totalDonet = noakhaliBalance + donetAmount;
       document.getElementById(id3).innerText = totalDonet + " BDT";
+
+      // time
+      const d = new Date();
+
+      // history
+      if (id1 === "noakhali-donet") {
+        getEleID(
+          "history"
+        ).innerHTML += `<div class="border rounded-xl p-8 mb-6">
+          <h1 class="text-xl font-semibold">
+            ${donetAmount} Taka is Donated for Flood Relief in Noakhali, Bangladesh
+          </h1>
+          <p class="text-base font-light mt-4">Date: ${d} </p>
+        </div>`;
+      } else if (id1 === "feni-donet") {
+        getEleID(
+          "history"
+        ).innerHTML += `<div class="border rounded-xl p-8 mb-6">
+          <h1 class="text-xl font-semibold">
+            ${donetAmount} Taka is Donated for Flood Relief in Feni, Bangladesh
+          </h1>
+          <p class="text-base font-light mt-4">Date: ${d} </p>
+        </div>`;
+      } else if (id1 === "quota-donet") {
+        getEleID(
+          "history"
+        ).innerHTML += `<div class="border rounded-xl p-8 mb-6">
+          <h1 class="text-xl font-semibold">
+            ${donetAmount} Taka is Donated for Aid for Injured in the Quota Movement, Bangladesh
+          </h1>
+          <p class="text-base font-light mt-4">Date: ${d} </p>
+        </div>`;
+      }
     } else {
       alert("You can not donet");
     }
   });
+}
+
+// show elements by id
+function toggle(id) {
+  getEleID("card-container").classList.add("hidden");
+  getEleID("history").classList.add("hidden");
+  getEleID(id).classList.remove("hidden");
 }
