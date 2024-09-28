@@ -92,7 +92,7 @@
     </header>
     <!-- main section  -->
     <main class="bg-white pb-10 md:pb-20 container mx-auto">
-      <section id="card-container">
+      <section id="card-container" class="p-3 md:p-0">
         <!--Noakhali flood card -->
         <div
           id="noakhali-flood-card"
@@ -134,16 +134,12 @@
               <button
                 id="noakhali-donet"
                 class="bg-btnColor w-full btn md:btn-md rounded-lg font-semibold text-xl text-textColor"
-                onclick="my_modal_5.showModal()"
               >
                 Donate Now
               </button>
 
               <!-- Open the modal using ID.showModal() method -->
-              <dialog
-                id="my_modal_5"
-                class="modal modal-bottom sm:modal-middle"
-              >
+              <dialog id="my_modal_5" class="modal modal-middle">
                 <div
                   class="modal-box flex flex-col justify-center items-center"
                 >

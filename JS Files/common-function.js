@@ -28,6 +28,8 @@ function donetFunction(id1, id2, id3) {
       const totalDonet = noakhaliBalance + donetAmount;
       document.getElementById(id3).innerText = totalDonet + " BDT";
 
+      my_modal_5.showModal();
+
       // time
       const d = new Date();
 
